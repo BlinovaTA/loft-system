@@ -25,6 +25,7 @@ router.post('/', async (req, res, next) => {
           newTokens.refreshToken,
           newTokens.refreshTokenExpiredAt
         )
+
         addDataTokenToUserObject(currentUser, newTokens)
 
         currentUser.id = currentUser._id
