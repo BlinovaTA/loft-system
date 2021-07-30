@@ -1,45 +1,45 @@
-const { Schema, model } = require("mongoose");
+const { Schema, model } = require('mongoose')
 
 const userSchema = new Schema({
   id: String,
   password: {
     type: String,
-    required: true
+    required: true,
   },
   firstName: {
     type: String,
-    required: true
+    required: true,
   },
   middleName: {
     type: String,
-    required: true
+    required: true,
   },
   permission: {
     chat: { C: Boolean, R: Boolean, U: Boolean, D: Boolean },
     news: { C: Boolean, R: Boolean, U: Boolean, D: Boolean },
-    settings: { C: Boolean, R: Boolean, U: Boolean, D: Boolean }
+    settings: { C: Boolean, R: Boolean, U: Boolean, D: Boolean },
   },
   surName: {
     type: String,
-    required: true
+    required: true,
   },
   username: {
     type: String,
     required: true,
-    unique: true
+    unique: true,
   },
   accessToken: {
-    type: String
+    type: String,
   },
   refreshToken: {
-    type: String
+    type: String,
   },
   accessTokenExpiredAt: {
-    type: Number
+    type: Number,
   },
   refreshTokenExpiredAt: {
-    type: Number
-  }
-});
+    type: Number,
+  },
+})
 
-module.exports = model("users", userSchema);
+module.exports = model('users', userSchema)
