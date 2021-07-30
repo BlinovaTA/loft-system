@@ -3,7 +3,10 @@
   "version": "0.0.0",
   "private": true,
   "scripts": {
-    "start": "nodemon ./bin/www"
+    "start": "nodemon ./bin/www",
+    "prettier": "prettier --write ./**/*.js",
+    "lint": " eslint **/*.{js,json}",
+    "lint:fix": "eslint --fix **/*.{js,json}"
   },
   "dependencies": {
     "bcryptjs": "^2.4.3",
@@ -21,6 +24,14 @@
     "pug": "^2.0.4"
   },
   "devDependencies": {
-    "nodemon": "^2.0.12"
+    "eslint": "^7.31.0",
+    "eslint-config-prettier": "^8.3.0",
+    "eslint-config-standard": "^16.0.3",
+    "eslint-plugin-import": "^2.23.4",
+    "eslint-plugin-json": "^3.0.0",
+    "eslint-plugin-node": "^11.1.0",
+    "eslint-plugin-promise": "^5.1.0",
+    "nodemon": "^2.0.12",
+    "prettier": "^2.3.2"
   }
 }
