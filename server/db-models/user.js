@@ -40,6 +40,7 @@ const userSchema = new Schema({
   refreshTokenExpiredAt: {
     type: Number,
   },
+  image: String,
 })
 
 module.exports = model('users', userSchema)
