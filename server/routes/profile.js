@@ -23,7 +23,7 @@ router.get(
   }
 )
 
-router.post(
+router.patch(
   '/',
   passport.authenticate('jwt', { session: false }),
   async (req, res) => {
@@ -56,8 +56,6 @@ router.post(
         )
 
         updateUser.id = updateUser._id
-
-        console.log(updateUser)
 
         res.status(200).json(updateUser)
       }

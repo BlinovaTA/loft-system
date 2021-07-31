@@ -33,7 +33,7 @@ const newsSchema = new Schema({
       type: String,
       required: true,
     },
-    image: String
+    image: String,
   },
 })
 

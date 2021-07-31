@@ -34,7 +34,7 @@ router.get('/', async (req, res) => {
           refreshToken: 1,
           accessTokenExpiredAt: 1,
           refreshTokenExpiredAt: 1,
-          image: 1
+          image: 1,
         },
       },
     ])

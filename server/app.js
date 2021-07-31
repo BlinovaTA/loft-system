@@ -48,8 +48,6 @@ app.use(function (err, req, res, next) {
     message: err.message,
     error: err,
   })
-
-  console.log(err.message)
 })
 
 module.exports = app
