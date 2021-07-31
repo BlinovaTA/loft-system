@@ -3,6 +3,8 @@ const router = express.Router()
 const passport = require('passport')
 const bcrypt = require('bcryptjs')
 const User = require('../db-models/user')
+const upload = require('../helpers/upload')
+const saveFileToCloudinary = require('../helpers/save-file-to-cloud')
 
 router.get(
   '/',
@@ -26,6 +28,7 @@ router.get(
 router.patch(
   '/',
   passport.authenticate('jwt', { session: false }),
+  upload.single('avatar'),
   async (req, res) => {
     try {
       const user = req.user
@@ -47,6 +50,15 @@ router.patch(
           firstName,
           middleName,
           surName,
+        }
+
+        if (req.file) {
+          const uploadToCloudinary = await saveFileToCloudinary(
+            req.file.path,
+            res
+          )
+
+          objectToUpdate.image = uploadToCloudinary.url
         }
 
         const updateUser = await User.findOneAndUpdate(
