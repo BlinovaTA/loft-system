@@ -11,8 +11,8 @@ const generateTokens = (userId) => {
 
   const refreshToken = generateToken(userId, refresh.type, refresh.expiresIn)
 
-  const accessTokenExpiredAt = Date.now() + access.expiresIn
-  const refreshTokenExpiredAt = Date.now() + refresh.expiresIn
+  const accessTokenExpiredAt = Date.now() * access.expiresIn
+  const refreshTokenExpiredAt = Date.now() * refresh.expiresIn
 
   return {
     accessToken,

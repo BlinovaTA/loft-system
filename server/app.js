@@ -14,7 +14,12 @@ const app = express()
 app.use(passport.initialize())
 require('./middleware/passport')(passport)
 
-app.use(cors())
+const options = {
+  origin: '*',
+  methods: ['GET', 'HEAD', 'PUT', 'PATCH', 'POST', 'DELETE'],
+}
+
+app.use(cors(options))
 app.use(logger('dev'))
 app.use(express.json())
 app.use(express.urlencoded({ extended: false }))

@@ -4,11 +4,11 @@
     "tokens": {
       "access": {
         "type": "access",
-        "expiresIn": 5000
+        "expiresIn": 1000
       },
       "refresh": {
         "type": "refresh",
-        "expiresIn": 5000
+        "expiresIn": 500000
       }
     }
   }

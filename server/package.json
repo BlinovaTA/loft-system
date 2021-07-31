@@ -5,7 +5,7 @@
   "scripts": {
     "start": "nodemon ./bin/www",
     "prettier": "prettier --write ./**/*.js",
-    "lint": " eslint **/*.{js,json}",
+    "lint": "eslint **/*.{js,json}",
     "lint:fix": "eslint --fix **/*.{js,json}"
   },
   "dependencies": {
