@@ -9,6 +9,9 @@ const debug = require("debug")("server:server");
 const http = require("http");
 const mongoose = require('mongoose');
 
+const socketIo = require('socket.io')
+const socket = require('../socket')
+
 /**
  * Get port from environment and store in Express.
  */
@@ -21,6 +24,8 @@ app.set("port", port);
  */
 
 const server = http.createServer(app);
+const io = socketIo.listen(server)
+socket(io);
 
 /**
  * Listen on provided port, on all network interfaces.
