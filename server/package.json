@@ -3,7 +3,8 @@
   "version": "0.0.0",
   "private": true,
   "scripts": {
-    "start": "nodemon ./bin/www",
+    "start": "node ./bin/www",
+    "server": "nodemon ./bin/www",
     "prettier": "prettier --write ./**/*.js",
     "lint": "eslint **/*.{js,json}",
     "lint:fix": "eslint --fix **/*.{js,json}"
@@ -38,5 +39,9 @@
     "eslint-plugin-promise": "^5.1.0",
     "nodemon": "^2.0.12",
     "prettier": "^2.3.2"
+  },
+  "engines": {
+    "node": "16.4.0",
+    "npm": "7.18.1"
   }
 }
