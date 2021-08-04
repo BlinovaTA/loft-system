@@ -37,7 +37,8 @@ socket(io);
       useNewUrlParser: true,
       useUnifiedTopology: true,
       useCreateIndex: true,
-      useFindAndModify: false
+      useFindAndModify: false, 
+      autoReconnect: true 
     })
 
     server.listen(port, () => {
@@ -107,5 +108,4 @@ function onError(error) {
 function onListening() {
   const addr = server.address();
   const bind = typeof addr === "string" ? "pipe " + addr : "port " + addr.port;
-  debug("Listening on " + bind);
 }

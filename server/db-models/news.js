@@ -14,26 +14,10 @@ const newsSchema = new Schema({
     required: true,
   },
   user: {
-    firstName: {
-      type: String,
-    },
     _id: {
       type: Types.ObjectId,
       ref: 'users',
     },
-    middleName: {
-      type: String,
-      required: true,
-    },
-    surName: {
-      type: String,
-      required: true,
-    },
-    username: {
-      type: String,
-      required: true,
-    },
-    image: String,
   },
 })
 
