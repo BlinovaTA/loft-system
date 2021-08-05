@@ -37,8 +37,7 @@ socket(io);
       useNewUrlParser: true,
       useUnifiedTopology: true,
       useCreateIndex: true,
-      useFindAndModify: false, 
-      autoReconnect: true 
+      useFindAndModify: false
     })
 
     server.listen(port, () => {
