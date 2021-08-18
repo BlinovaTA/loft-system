@@ -1,0 +1,15 @@
+{
+  "jwt": {
+    "secret": "secret",
+    "tokens": {
+      "access": {
+        "type": "access",
+        "expiresIn": 1000
+      },
+      "refresh": {
+        "type": "refresh",
+        "expiresIn": 500000
+      }
+    }
+  }
+}
